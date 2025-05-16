@@ -117,7 +117,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <span className="text-monokai-green">{text}</span>
-            <Cursor cursorStyle="|" className="cursor" />
+            <Cursor cursorStyle="|" />
           </motion.h1>
 
           <div className="bg-[#1e1f1c] mt-4 p-4 rounded border border-monokai-green text-sm whitespace-pre-line min-h-[200px]">
