@@ -1,0 +1,132 @@
+/* Terminal green on black background */
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #272822;
+  color: #f8f8f2;
+}
+
+/* Cursor blink is handled by react-simple-typewriter but here’s fallback */
+.cursor {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Optional: subtle flicker on text */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.flicker {
+  animation: flicker 2s infinite;
+}
+:root {
+  --monokai-bg: #272822;
+  --monokai-text: #f8f8f2;
+  --monokai-green: #a6e22e;
+  --monokai-orange: #fd971f;
+  --monokai-pink: #f92672;
+  --monokai-yellow: #e6db74;
+  --monokai-cyan: #66d9ef;
+}
+
+/* Background and base text */
+.bg-monokai-bg {
+  background-color: var(--monokai-bg);
+}
+
+.text-monokai-text {
+  color: var(--monokai-text);
+}
+
+/* Neon green text like variables */
+.text-monokai-green {
+  color: var(--monokai-green);
+}
+
+/* Orange highlight */
+.text-monokai-orange {
+  color: var(--monokai-orange);
+}
+
+/* Pink highlight */
+.text-monokai-pink {
+  color: var(--monokai-pink);
+}
+
+/* Yellow highlight */
+.text-monokai-yellow {
+  color: var(--monokai-yellow);
+}
+
+/* Cyan highlight */
+.text-monokai-cyan {
+  color: var(--monokai-cyan);
+}
+
+/* Buttons with subtle monokai style */
+.button-monokai {
+  background-color: var(--monokai-bg);
+  border: 2px solid var(--monokai-green);
+  padding: 0.5em 1.5em;
+  color: var(--monokai-green);
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.button-monokai:hover {
+  background-color: var(--monokai-green);
+  color: var(--monokai-bg);
+  box-shadow:
+    0 0 10px var(--monokai-green),
+    0 0 20px var(--monokai-green);
+}
+
+/* Flicker cursor */
+.cursor {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+input.cursor-blink::after {
+  content: '|';
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
+  color: #a6e22e;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+input {
+  background-color: #1e1f1c !important;
+  color: #a6e22e;
+}
+
+input::placeholder {
+  color: #e6db74;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: #1e1f1c !important;
+  -webkit-box-shadow: 0 0 0 1000px #1e1f1c inset !important;
+  -webkit-text-fill-color: #a6e22e !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+.caret-animation {
+  caret-color: #a6e22e;
+  animation: blink-caret 1s step-start infinite;
+}
