@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: true,
-  images: { unoptimized: true },
-  basePath: '/luishdev.com', // ← change to your actual repo name
+  output: 'export',
+  trailingSlash: true, // required for static export + GitHub Pages
+  images: {
+    unoptimized: true // optional: disables Image Optimization which isn’t supported in export mode
+  }
 };
 
 module.exports = nextConfig;
