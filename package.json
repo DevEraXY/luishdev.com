@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "deploy": "npm run build && gh-pages -d out"
+    "build": "next build",
+    "deploy": "next start"
   },
   "dependencies": {
     "autoprefixer": "^10.4.0",
