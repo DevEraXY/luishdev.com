@@ -3,6 +3,7 @@ body {
   font-family: 'JetBrains Mono', monospace;
   background-color: #272822;
   color: #f8f8f2;
+  padding: 5vh 5vw;
 }
 
 /* Cursor blink is handled by react-simple-typewriter but here’s fallback */
@@ -112,7 +113,16 @@ input {
   background-color: #1e1f1c !important;
   color: #a6e22e;
 }
+/* NEEDS TO BE FIXED 
+input {
 
+  background-color: #1e1f1c !important;
+  -webkit-box-shadow: 0 0 0 1000px #1e1f1c inset !important;
+  -webkit-text-fill-color: #a6e22e !important;
+  transition: background-color 9999s ease-in-out 0s;
+  border: none;
+  outline: none;
+}
 input::placeholder {
   color: #e6db74;
 }
@@ -125,8 +135,29 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 1000px #1e1f1c inset !important;
   -webkit-text-fill-color: #a6e22e !important;
   transition: background-color 9999s ease-in-out 0s;
+  border: none;
+  outline: none;
 }
+*/
 .caret-animation {
   caret-color: #a6e22e;
   animation: blink-caret 1s step-start infinite;
+}
+
+
+.terminal-input {
+  appearance: none;
+  background-color: #1e1f1c;
+  color: #a6e22e;
+  padding: 1vh;
+  border: none;
+  border-radius: 1vh;
+  outline: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem; /* Tailwind's text-sm */
+}
+
+.terminal-input::placeholder {
+  color: #e6db74; /* monokai yellow */
+  opacity: 0.6;
 }
